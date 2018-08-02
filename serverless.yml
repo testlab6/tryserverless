@@ -8,6 +8,7 @@ provider:
 
 plugins:
   - serverless-mocha-plugin
+  - serverless-stack-output
 
 functions:
   currentDate:
@@ -18,3 +19,6 @@ functions:
       - http:
           path: ping
           method: get
+custom:
+  output:
+    file: .build/stack.json

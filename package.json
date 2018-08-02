@@ -6,5 +6,8 @@
   "license": "MIT",
   "devDependencies": {
     "serverless-mocha-plugin": "^1.8.3"
+  },
+  "dependencies": {
+    "serverless-stack-output": "^0.2.3"
   }
 }
