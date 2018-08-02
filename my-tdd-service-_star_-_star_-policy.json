@@ -6,7 +6,6 @@
       "Action": [
         "cloudformation:List*",
         "cloudformation:Get*",
-        "cloudformation:PreviewStackUpdate",
         "cloudformation:ValidateTemplate"
       ],
       "Resource": [
