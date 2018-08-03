@@ -17,11 +17,15 @@ plugins:
 functions:
   currentDate:
     handler: date/handler.endpoint
+    events:
+      - http:
+          path: ping/date
+          method: get
   currentTime:
     handler: handler.endpoint
     events:
       - http:
-          path: ping
+          path: ping/time
           method: get
 custom:
   output:
