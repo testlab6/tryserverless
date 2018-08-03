@@ -3,7 +3,7 @@
 echo "Installing serverless"
 echo "====================="
 npm install -g serverless
-npm install serverless-offline serverless-stack-output # we have to install the three plugins specified in our serverless.yml to avoid errors, even though we won't be using them
+npm install serverless-offline serverless-stack-output serverless-mocha-plugin # we have to install the three plugins specified in our serverless.yml to avoid errors, even though we won't be using them
 
 echo "Deploying app to $env"
 echo "====================="
