@@ -14,7 +14,22 @@ phases:
       - echo Build started on `date`
       - echo Compiling the Node.js code
       - serverless deploy --stage test -v
+      - serverless invoke test
+      # create directory for deployment packages
+      - mkdir artifacts
+      # create staging deployment package
+      - mkdir artifacts/stg
+      - serverless package --package artifacts/stg --stage stg -v
+      # create prod deployment package
+      - mkdir artifacts/prod
+      - serverless package --package artifacts/prod --stage prod -v
   post_build:
     commands:
       - echo Build completed on `date`
       - serverless remove --stage test -v
+
+artifacts:
+  files:
+    - artifacts/**/*
+    - serverless.yml
+    - deploy.sh

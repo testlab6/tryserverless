@@ -21,4 +21,4 @@ functions:
           method: get
 custom:
   output:
-    file: .build/stack.json
+    file: build/stack.json
